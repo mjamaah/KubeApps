@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v
+    - uses: actions/checkout@v4
     - uses: elgohr/Publish-Docker-Github-Action@master
       name: Publish to Docker
       with:
-        name: mjamaah/kubectl
+        name: mjamaah/kubeapps
         username: ${{ secrets.docker_username }}
         password: ${{ secrets.docker_password }}
         tags: latest,1.28.4
