@@ -1,5 +1,9 @@
 name: KubeApps v1.28.4
 description: Use bitnami's 1.28.4 kubectl and Helm with your Github actions
+author: Mahmoud Jama'ah
+branding:
+  icon: command
+  color: gray-dark
 inputs:
   kube_config:
     description: The kube config data
