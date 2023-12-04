@@ -16,13 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Deploy to cluster
-      uses: mjamaah/kubeapps@master
+      uses: mjamaah/KubeApps@v1.28.4
       with:
         kube_config: ${{ secrets.kube_config }}
         command: set image --record deployment/<my-deploy> <my-container>=<my-image>:<new-tag>
         action: kubectl
     - name: Verify deployment
-      uses: mjamaah/kubeapps@master
+      uses: mjamaah/KubeApps@v1.28.4
       with:
         kube_config: ${{ secrets.kube_config }}
         command: '"rollout status deployment/<my-deploy>"'
@@ -43,7 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Deploy to cluster
-      uses: mjamaah/kubeapps@master
+      uses: mjamaah/KubeApps@v1.28.4
       with:
         kube_config: ${{ secrets.kube_config }}
         command: upgrade --install -n <NameSpace> <Release> <Chart>
