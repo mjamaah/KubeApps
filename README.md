@@ -1,7 +1,3 @@
-# KubeApps
-
-
-
 # Github Action for Kubernetes CLI (Kubectl and helm)
 
 This action provides `kubectl v1.25.14` for Github Actions.
