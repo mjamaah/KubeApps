@@ -56,5 +56,5 @@ ENV APP_VERSION="1.28.4" \
     PATH="/opt/bitnami/kubectl/bin:$PATH"
 
 USER 1001
-ENTRYPOINT [ "helm" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "--help" ]

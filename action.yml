@@ -1,0 +1,14 @@
+name: KubeApps v1.28.4
+description: Use bitnami's 1.28.4 kubectl and Helm with your Github actions
+inputs:
+  kube_config:
+    description: The kube config data
+    required: true
+  action:
+    description: action (kubectl or helm)
+    required: true
+    default: 'kubectl'
+
+runs:
+  using: docker
+  image: docker://mjamaah/kubeapps:1.28.4
