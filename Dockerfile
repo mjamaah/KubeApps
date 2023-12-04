@@ -55,6 +55,19 @@ ENV APP_VERSION="1.28.4" \
     BITNAMI_APP_NAME="kubectl" \
     PATH="/opt/bitnami/kubectl/bin:$PATH"
 
+LABEL version="1.28.4"
+LABEL name="kubeapps"
+LABEL repository="https://github.com/mjamaah/KubeApps"
+LABEL homepage="https://github.com/mjamaah/KubeApps"
+
+LABEL com.github.actions.name="Kubernetes CLI (Kubectl and helm)"
+LABEL com.github.actions.description="This action provides kubectl v1.28.4 and helm for Github Actions"
+LABEL com.github.actions.icon="terminal"
+LABEL com.github.actions.color="gray-dark"
+
+COPY LICENSE README.md /    
+COPY entrypoint.sh /entrypoint.sh
+
 USER 1001
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "--help" ]
