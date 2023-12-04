@@ -1,6 +1,6 @@
 # Github Action for Kubernetes CLI (Kubectl and helm)
 
-This action provides `kubectl v1.25.14` for Github Actions.
+This action provides `kubectl v1.28.4` and `helm` for Github Actions.
 
 ## Usage
 
