@@ -61,4 +61,4 @@ cat $HOME/.kube/config | base64
 
 ## Referance
 
-[bitnami containers, Kubectl](https://github.com/bitnami/containers/tree/main/bitnami/kubectl/1.28/debian-11)
+[Kubectl packaged by Bitnami](https://github.com/bitnami/containers/tree/main/bitnami/kubectl)
