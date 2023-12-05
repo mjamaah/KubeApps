@@ -61,6 +61,6 @@ cat $HOME/.kube/config | base64
 
 ## Referance
 
-[Kubectl packaged by Bitnami](https://github.com/bitnami/containers/tree/main/bitnami/kubectl)
-[Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+  [Kubectl packaged by Bitnami](https://github.com/bitnami/containers/tree/main/bitnami/kubectl)
+  [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
