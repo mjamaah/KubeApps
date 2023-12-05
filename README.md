@@ -19,14 +19,14 @@ jobs:
       uses: mjamaah/KubeApps@v1.28.4
       with:
         kube_config: ${{ secrets.kube_config }}
-        command: set image --record deployment/<my-deploy> <my-container>=<my-image>:<new-tag>
         action: kubectl
+        command: set image --record deployment/<my-deploy> <my-container>=<my-image>:<new-tag>
     - name: Verify deployment
       uses: mjamaah/KubeApps@v1.28.4
       with:
         kube_config: ${{ secrets.kube_config }}
-        command: '"rollout status deployment/<my-deploy>"'
         action: kubectl
+        command: '"rollout status deployment/<my-deploy>"'
 ```
 
 ## Usage (helm)
@@ -46,8 +46,8 @@ jobs:
       uses: mjamaah/KubeApps@v1.28.4
       with:
         kube_config: ${{ secrets.kube_config }}
-        command: upgrade --install -n <NameSpace> <Release> <Chart>
         action: helm
+        command: upgrade --install -n <NameSpace> <Release> <Chart>
 ```
 
 
@@ -58,3 +58,7 @@ Make sure to base64-encode your kubeconfig file and put it in a github secret.  
 ```bash
 cat $HOME/.kube/config | base64
 ```
+
+## Referance
+
+[bitnami containers, Kubectl](https://github.com/bitnami/containers/tree/main/bitnami/kubectl/1.28/debian-11)
